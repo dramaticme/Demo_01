@@ -1,0 +1,23 @@
+<h1>Welcome User!</h1>
+
+<p>Enter your Username: </p>
+<input type="text"
+       [(ngModel)]="username"
+       placeholder="Username">
+
+<p>Your username is: {{ username }}</p>
+
+<p>Enter your Password: </p>
+<input [type]="show ? 'text' : 'password' "
+       [(ngModel)]="password"
+       placeholder="Password">
+
+<button (click)="showPassword()">Show Password</button>
+
+<br />
+<br />
+
+<button (click)="Login()">Login</button>
+<p>{{ message }}</p>
+<app-menu></app-menu>
+<app-my-account [username]="username" [password]="password"></app-my-account>
