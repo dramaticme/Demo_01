@@ -19,5 +19,7 @@
 
 <button (click)="Login()">Login</button>
 <p>{{ message }}</p>
-<app-menu></app-menu>
+<app-menu [username]="username"></app-menu>
+<br />
+<br />
 <app-my-account [username]="username" [password]="password"></app-my-account>

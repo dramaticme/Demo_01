@@ -1,11 +1,12 @@
+
+<h1>{{Dashboard()}}{{Message_04}}</h1>
 <h2>Menu</h2>
 
-<ol>
-  <li><button (click)="ToDo()">ToDo</button></li>
-  <li><button (click)="Diary()">Diary</button></li>
-</ol>
-
-<p>{{ Message_01 }}</p>
+<button (click)="ToDo()">ToDo</button>
+<br />
 
 <app-to-do></app-to-do>
+
+<button (click)="Diary()">Diary</button>
+<br />
 <app-diary></app-diary>
