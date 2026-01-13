@@ -1,8 +1,12 @@
-<Input type="text"
-       [{ngModel}]="Title"
+<input type="text"
+       [(ngModel)]="title"
        placeholder="Title" />
-<textarea
-          rows="22"
-       [{ngModel}]="Diary_Content"
-       placeholder="Start Writting here...">
-</textarea>
+<textarea [(ngModel)]="Diary_Content"
+          placeholder="Start Writting here..."
+          maxlength="200"
+          rows="6"
+          cols="22"
+          ></textarea>
+<br />
+<button (click) ="save()">save</button>
+<p>{{Message_06}}</p>

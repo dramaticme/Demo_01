@@ -25,6 +25,7 @@ export class Login {
   Login(){
     if( this.username.length >0 && this.password.length >0){
       this.message = 'Login Successful!' ;
+      console.log("Username "+this.username+" LoggedIn!");
     }
     else{
       this.message = 'Error: Enter a Username and Password.';
