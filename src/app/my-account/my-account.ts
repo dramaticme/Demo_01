@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { Input } from '@angular/core';
+import { Menu } from '../menu/menu';
+import { Router } from '@angular/router';
 //retriveing data from parent to child using @Input decorator
 @Component({
   selector: 'app-my-account',
@@ -8,6 +10,8 @@ import { Input } from '@angular/core';
   styleUrl: './my-account.css',
 })
 export class MyAccount {
+  constructor (private router : Router) {}
+  
   Message_02 ='';
   Message_03 = '';
   //data from parent to child component
@@ -19,4 +23,8 @@ export class MyAccount {
      this.Message_03 = `Username: ${this.username}
 Password: ${this.password}`;
     }
+
+  Menu(){
+    return this.router.navigate(['/menu']);
+  }
 }

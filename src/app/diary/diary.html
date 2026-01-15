@@ -1,13 +1,22 @@
-<input type="text"
-       [(ngModel)]="title"
-       placeholder="Title" />
-<br />
+<html>
+<body>
+  <div class="container" style="margin-top: 100px">
+    <h3 style="color : darkblue">Diary</h3>
+    <div class="rightside">
+      <button style="background-color: cadetblue " (click)="Menu()">Menu</button>
+    </div>
+    <input type="text"
+           [(ngModel)]="title"
+           placeholder="Title" />
+    <br />
 <textarea [(ngModel)]="Diary_Content"
           placeholder="Start Writting here..."
           maxlength="200"
           rows="6"
-          cols="22"
-          ></textarea>
-<br />
-<button style = "background-color : cornflowerblue" (click) ="save()">save</button>
-<p>{{Message_06}}</p>
+          cols="22"></textarea>
+    <br />
+    <button style="background-color : cornflowerblue" (click)="save()">save</button>
+    <p>{{Message_06}}</p>
+  </div>
+</body>
+</html>

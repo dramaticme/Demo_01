@@ -1,0 +1,14 @@
+.container {
+  height: 50%;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.center {
+  text-align: center;
+}
+
+.rightside {
+  text-align: right;
+}

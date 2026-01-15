@@ -1,11 +1,20 @@
 <!--Intially one Input task
   Next Add Task Button-->
-
-<input type="text"
-       [(ngModel)]="task"
-       placeholder="Write Task" />
-<br />
-<button style = "background-color : cornflowerblue" (click) ="Add()">add</button>
-<p>{{Message_07}}</p>
-
+<html>
+<body>
+  <div class="container" style="margin-top: 100px">
+      <h3 style="color : darkblue">To-Do List</h3>
+      <div class="rightside">
+        <button style="background-color: cadetblue " (click)="Menu()">Menu</button>
+      </div>
+      <input type="text"
+             [(ngModel)]="task"
+             placeholder="Write Task" />
+      <br />
+      <button style="background-color : cornflowerblue" (click)="Add()">add</button>
+      <p>{{Message_07}}</p>
+    
+  </div>
+</body>
+</html>
 
