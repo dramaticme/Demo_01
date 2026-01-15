@@ -1,12 +1,25 @@
+<html>
+<body>
+  <div class="container" style="margin-top: 100px; ">
+    <div class="center">
+      <h1 style="color : darkblue">Dashboard</h1>
+    </div>
+    <div class="rightside">
+      <button style="background-color: lavender" (click)="Logout()">Logout</button>
+      <br />
+      <button style="background-color: lavender" (click)="MyAccount()">My Account</button>
+      <hr />
+    </div>
+    <h5 style="color: darkblue">Menu</h5>
 
-<h1>{{Dashboard()}}{{Message_04}}</h1>
-<h2>Menu</h2>
+    <button style="background-color: cadetblue" (click)="ToDo()">ToDo</button>
+    <br />
 
-<button (click)="ToDo()">ToDo</button>
-<br />
 
-<app-to-do></app-to-do>
+    <button style="background-color: cadetblue" (click)="Diary()">Diary</button>
+    <br />
 
-<button (click)="Diary()">Diary</button>
-<br />
-<app-diary></app-diary>
+    
+  </div>
+</body>
+</html>

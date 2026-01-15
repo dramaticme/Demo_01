@@ -1,6 +1,7 @@
 <input type="text"
        [(ngModel)]="title"
        placeholder="Title" />
+<br />
 <textarea [(ngModel)]="Diary_Content"
           placeholder="Start Writting here..."
           maxlength="200"
@@ -8,5 +9,5 @@
           cols="22"
           ></textarea>
 <br />
-<button (click) ="save()">save</button>
+<button style = "background-color : cornflowerblue" (click) ="save()">save</button>
 <p>{{Message_06}}</p>

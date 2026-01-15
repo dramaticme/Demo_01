@@ -1,26 +1,39 @@
 import { Component } from '@angular/core';
 import { ToDo } from '../to-do/to-do';
 import { Diary } from '../diary/diary';
+import { Login } from '../login/login';
+import { MyAccount } from '../my-account/my-account';
 import { Input } from '@angular/core';
+import { Router } from '@angular/router';
+//retriveing data from parent to child using @Input decorator
 
 @Component({
   selector: 'app-menu',
-  imports: [ToDo, Diary],
+  imports: [],
   templateUrl: './menu.html',
   styleUrl: './menu.css',
 })
 export class Menu {
+  constructor (private router : Router){}
   Message_01 = '';
   Message_04 = '';
+  //data from parent to child component
   @Input() username!: string;
+  
   
   Dashboard(){
     this.Message_04 = `${this.username}'s Dashboard`;
     }
   ToDo(){
-    this.Message_01 = 'To-Do Component Loaded!';
+    this.router.navigate(['/todo']);
 }
-  Diary(){
-    this.Message_01 = 'Diary Component Loaded!';
+  Diary(){   
+    this.router.navigate(['/diary']);
 }
+  Logout(){
+    this.router.navigate(['/login']);
+  }
+  MyAccount(){
+    this.router.navigate(['/myaccount']);
+  }
 }

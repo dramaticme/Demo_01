@@ -1,25 +1,52 @@
-<h1>Welcome User!</h1>
+<html>
+<body>
+  <div class="container" style="margin-top:100px; ">
+    <div class="center">
+      <h1 style="color: darkblue">Welcome User!</h1>
+      <br />
+    </div>
+    <!--1. Data Binding -->
+    <div class="center">
 
-<p>Enter your Username: </p>
-<input type="text"
-       [(ngModel)]="username"
-       placeholder="Username">
+      <!--one way : Property Binding -->
+      <!--two way Binding -->
+      <p><b>Enter your Username: </b></p>
+      <input [type]="one_way"
+             [(ngModel)]="username"
+             placeholder="Username">
 
-<p>Your username is: {{ username }}</p>
+      <br />
+      <br />
+      <!--one way : Property Binding -->
+      <p><b>Enter your Password: </b></p>
+      <input [type]="show ? 'text' : 'password' "
+             [(ngModel)]="password"
+             placeholder="Password">
 
-<p>Enter your Password: </p>
-<input [type]="show ? 'text' : 'password' "
-       [(ngModel)]="password"
-       placeholder="Password">
+      <!--one way : Event Binding -->
 
-<button (click)="showPassword()">Show Password</button>
+      <button style="background-color: cornflowerblue" (click)="showPassword()">Show Password</button>
 
-<br />
-<br />
+      <br />
+      <br />
 
-<button (click)="Login()">Login</button>
-<p>{{ message }}</p>
-<app-menu [username]="username"></app-menu>
-<br />
-<br />
-<app-my-account [username]="username" [password]="password"></app-my-account>
+      <button style="background-color : cadetblue" (click)="Login()">Login</button>
+      <!--one-way : Interpolation-->
+      <p>{{ message }}</p>
+    </div>
+  </div>
+
+  <!--selector of app-menu component rendered here-->
+  <!--Passing data from parent to child component
+  <app-menu [username]="username"></app-menu>
+
+  <br />
+  <br />
+    -->
+  <!--selector of app-my-account component rendered here-->
+  <!--Passing Data from parent to child component
+  <app-my-account [username]="username" [password]="password"></app-my-account>
+    -->
+</body>
+</html>
+

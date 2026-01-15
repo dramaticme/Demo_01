@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Input } from '@angular/core';
+//retriveing data from parent to child using @Input decorator
 @Component({
   selector: 'app-my-account',
   imports: [],
@@ -9,11 +10,13 @@ import { Input } from '@angular/core';
 export class MyAccount {
   Message_02 ='';
   Message_03 = '';
-    @Input() username!: string;
-    @Input() password!: string;
-    MyAccount(){
-      this.Message_02 =`Account Details: `;      
-      this.Message_03 = `Username: ${this.username}
+  //data from parent to child component
+  @Input() username!: string;
+  @Input() password!: string;
+
+  MyAccount(){
+     this.Message_02 =`Account Details: `;      
+     this.Message_03 = `Username: ${this.username}
 Password: ${this.password}`;
     }
 }
