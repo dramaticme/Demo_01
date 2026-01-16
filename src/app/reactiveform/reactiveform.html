@@ -1,0 +1,30 @@
+<html>
+<body>
+  <div style="margin-top:100px" class="container">
+    <div class="center">
+      <h3 style="color: darkblue">Bug Submission</h3>
+      <div class="rightside">
+        <button style="background-color: cadetblue" (click)="menu()">Menu</button>
+      </div>
+
+    </div>
+      <form [formGroup]="myForm" (ngSubmit)="submit()">
+        <h6>Enter Email:</h6>
+        <input formControlName="email">
+
+        <h6>Bug Title:</h6>
+        <input formControlName="BugTitle">
+
+        <h6>Bug Description:</h6>
+        <textarea formControlName="BugDescription"></textarea>
+        <br />
+        <button style="background-color: cornflowerblue" type="submit">Submit</button>
+
+      </form>
+
+      <p>{{ message }}</p>
+
+    
+  </div>
+</body>
+</html>

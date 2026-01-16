@@ -1,0 +1,31 @@
+<html>
+<body>
+  <div style="margin-top :100px" class="container">
+    <div class="center">
+
+      <h3 style="color: darkblue">User Feedback</h3>
+      <div class="rightside">
+        <button style="background-color: cadetblue" (click)="Menu()">Menu</button>
+      </div>
+
+    </div>
+    <form (ngSubmit)="submit()">
+
+      <h6>Enter Email:</h6>
+      <input [(ngModel)]="email" name="email" placeholder="Email">
+
+      <h6>Enter your Feedback: </h6>
+      <textarea [(ngModel)]="feedback" name="feedback" placeholder="Feedback"></textarea>
+      <br />
+      <button style="background-color: cornflowerblue" type="submit">Submit</button>
+    </form>
+
+    <p>{{ message }}</p>
+    <button style="background-color: cadetblue" (click)="LoadPosts()">Show All</button>
+    <div *ngFor="let post of posts">
+      <p><b>{{ post.title }}</b></p>
+    </div>
+  </div>
+  
+</body>
+</html>

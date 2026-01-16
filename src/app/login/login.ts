@@ -4,6 +4,8 @@ import { MyAccount } from '../my-account/my-account';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
+//import { UserService } from '../user.service';
+
 
 @Component({
   selector: 'app-login',
@@ -14,7 +16,10 @@ import { Router } from '@angular/router';
   styleUrl: './login.css',
 })
 export class Login {
-  constructor (private router : Router) {}
+  //Injecting Router and UserService
+   constructor
+     (private router: Router,// Dependency Injection
+    ) { }
   // Varibles in Typescript
   /*
   1. String
@@ -43,9 +48,8 @@ export class Login {
   //Array Inbuild functions
   //push(), pop(), shift(), unshift(), splice()
   Summer : string[] = ['Sweater','Jacket'];
-
   username = '';
-  password  = '';
+  password = '';  
   message = '';
   one_way = 'text';
   show = false;

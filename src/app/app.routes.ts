@@ -4,6 +4,10 @@ import { Diary } from './diary/diary';
 import  { Menu } from './menu/menu';
 import { MyAccount } from './my-account/my-account';
 import { Login } from './login/login';
+import { UserInfo } from './userinfo/userinfo';
+import { Reactiveform } from './reactiveform/reactiveform'
+import { Templateform } from './templateform/templateform';
+
 
 export const routes: Routes = [
   {
@@ -30,5 +34,17 @@ export const routes: Routes = [
   {
     path:'todo',
     component: ToDo
+  },
+  {
+    path: 'userinfo',
+    component: UserInfo 
+  },
+  {
+    path: 'reactiveform',
+    component: Reactiveform
+  },
+  {
+    path: 'templateform',
+    component: Templateform
   }
 ];

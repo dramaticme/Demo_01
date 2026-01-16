@@ -3,6 +3,9 @@ import { ToDo } from '../to-do/to-do';
 import { Diary } from '../diary/diary';
 import { Login } from '../login/login';
 import { MyAccount } from '../my-account/my-account';
+import { UserInfo } from '../userinfo/userinfo';
+import { Reactiveform } from '../reactiveform/reactiveform';
+import { Templateform } from '../templateform/templateform';
 import { Input } from '@angular/core';
 import { Router } from '@angular/router';
 //retriveing data from parent to child using @Input decorator
@@ -30,10 +33,20 @@ export class Menu {
   Diary(){   
     this.router.navigate(['/diary']);
 }
-  Logout(){
+  Logout() {    
     this.router.navigate(['/login']);
+    alert("Logged Out!");
   }
   MyAccount(){
     this.router.navigate(['/myaccount']);
+  }
+  GetService() {
+    this.router.navigate(['/userinfo']);
+  }
+  ReactiveForm() {
+    this.router.navigate(['/reactiveform']);
+  }
+  TemplateForm() {
+    this.router.navigate(['/templateform']);
   }
 }

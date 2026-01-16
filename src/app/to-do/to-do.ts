@@ -14,8 +14,9 @@ export class ToDo {
   task: string[] =[];
   Message_07='';
 
-  Add(){
-    return this.Message_07='Task added!'
+  Add() {
+    alert("Task added!");
+    return this.Message_07 = 'Task added!';
   }
   Menu(){
     return this.router.navigate(['/menu']);

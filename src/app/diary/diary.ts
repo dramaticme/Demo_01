@@ -16,8 +16,9 @@ export class Diary {
   Message_06='';
 
   save(){
-    console.log("Diary Add: "+ this.title);
-    return this.Message_06=`Diary saved!`
+    console.log("Diary Add: " + this.title);
+    alert("Diary saved!");
+    return this.Message_06 = `Diary saved!`;
   }
   Menu(){
     return this.router.navigate(['/menu']);
